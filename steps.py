@@ -1,18 +1,13 @@
-def fib(n):
+def climbStairs(n):
+ steps = []
+ steps.append(1)
+ steps.append(2)
+ for i in range(2, n):
+  steps.append(f[i - 1] + f[i - 2])
+ return steps[n - 1]
+n=3
+print(climbStairs(n))
 
-    if n <= 1:
 
-        return n
 
-    return fib(n-1) + fib(n-2)
- 
 
-def countWays(s):
-
-    return fib(s + 1)
-
-s = 5
-
-print ("Number of ways = ",)
-
-print (countWays(s))
